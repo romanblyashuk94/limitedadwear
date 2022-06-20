@@ -1,0 +1,28 @@
+.breadcrumbs {
+    margin-top: 13px;
+}
+
+.breadcrumbs__list {
+    display: flex;
+    gap: 3px;
+}
+
+.breadcrumbs__item {
+    &:not(:last-child)::after {
+        content: '<';
+        font-size: 10px;
+    }
+
+    .breadcrumbs__link {
+        color: $textLinkColor;
+
+        &:hover {
+            color: $selectedLinkColor;
+        }
+    }
+
+    &--last .breadcrumbs__link{
+        color: $primaryTextColor ;
+    }
+
+}

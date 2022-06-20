@@ -1,0 +1,18 @@
+.logo {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 26px;
+    text-transform: uppercase;
+}
+
+.logo_link {
+    color: $textLinkColor;
+
+    &::after {
+        content: '';
+        display: inline-block;
+        margin-left: 5px;
+        width: 6px;
+        height: 21px;
+        background-image: url('../img/logoDots.svg');
+    }
+}

@@ -1,0 +1,17 @@
+// Fonts:
+@import '../fonts/Avenir-Roman/style.css';
+@import '../fonts/ProximaNova/stylesheet.css';
+
+@import './utils/variables';
+
+@import './base/resetDefaultStyles';
+@import './base/common.scss';
+
+@import './components/alert';
+@import './components/header';
+@import './components/logo';
+
+@import './components/breadcrumbs';
+@import './components/productCard';
+
+

@@ -1,0 +1,45 @@
+.alert {
+    position: fixed;
+    top: 0;
+    z-index: 9;
+    width: 100%;
+    padding: 9px 0;
+    background-color: #ede3d6;
+    text-align: center;
+    transform: translateY(-100%);
+    transition: transform $transitionSetting;
+
+
+    &.isOpen {
+        transform: translateY(0);
+    }
+}
+
+.alert__message {
+    display: inline-block;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $textLinkColor;
+
+}
+
+.aletr__message--bolt {
+    font-family: 'Proxima Nova Semibold'
+}
+
+.alert__link {
+    color: inherit;
+}
+
+.alert__closeBtn {
+    float: right;
+    background-color: inherit;
+
+    & .closeBtn__icon {
+        fill: #ffffff;
+
+        &:hover {
+            fill: $textLinkColor;
+        }
+    }
+}

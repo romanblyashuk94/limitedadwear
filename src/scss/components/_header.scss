@@ -1,0 +1,137 @@
+.header {
+    padding-top: 38px;
+}
+
+.siteNav__list {
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+}
+
+.siteNav__link {
+    color: $textLinkColor;
+    font-size: 10px;
+    text-transform: uppercase;
+    padding: 3px 4px 3px 0;
+
+    &:hover,
+    &--curentLink {
+        color: $selectedLinkColor;
+    }
+
+    .siteNav__item--authorization &:not(:last-child) {
+        border-right: 1px solid #cccccc;
+    }
+
+}
+
+
+.header__midle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 19px;
+}
+
+// _________________
+
+.header__midle--right {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+// _________________________________________-
+.searchForm {
+    position: relative;
+}
+
+.searchForm__input {
+    width: 267px;
+    height: 31px;
+    border: 1px solid $textLinkColor;
+    padding: 12px 30px 12px 10px;
+
+    &:focus {
+        border: 1px solid $selectedLinkColor;
+    }
+}
+
+.searchForm__icon {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    fill: $textLinkColor;
+}
+
+.searchForm__input:focus + .searchForm__icon {
+    fill: $selectedLinkColor;
+}
+
+
+// ___________
+
+.basket__link {
+    display: inline-flex;
+    align-items: center;
+    color: $primaryTextColor;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1.5;
+    transition: color $transitionSetting;
+
+    &:hover {
+        color: $selectedLinkColor;
+    }
+}
+
+.basket__icon {
+    fill: $selectedLinkColor;
+    margin-right: 8px;
+}
+
+// ________________
+
+
+.header__bottom {
+    margin-top: 33px;
+    padding: 30px 0;
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.catalogNav__List {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    text-transform: uppercase;
+}
+
+.catalogNav__link {
+    display: flex;
+    align-items: center;
+    font-family: 'Proxima Nova Rg';
+    color: $primaryTextColor;
+    font-size: 14px;
+    transition: color $transitionSetting;
+
+    &__icon {
+        fill: gray;
+        margin-left: 12px;
+    }
+
+    &:hover {
+        color: $selectedLinkColor;
+
+        .catalogNav__link__icon {
+            fill: $selectedLinkColor;
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.catalogNav__link__icon{
+    transition: transform $transitionSetting;
+}
