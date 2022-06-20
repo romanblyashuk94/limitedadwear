@@ -1,0 +1,2 @@
+var e=function(e){const a="rating__star far fa-star",t=e.length;let s;e.map((r=>{r.onclick=()=>{if(s=e.indexOf(r),r.className===a)for(;s>=0;--s)e[s].className="rating__star fas fa-star";else for(;s<t;++s)e[s].className=a}}))};const a=document.querySelector("[data-alert]"),t=document.querySelector("[data-close-alert]");var s,r;e([...document.getElementsByClassName("rating__star")]),s=a,(r=t).addEventListener("click",(function e(){s.classList.remove("isOpen"),r.removeEventListener("click",e)}));
+//# sourceMappingURL=index.c998b113.js.map
