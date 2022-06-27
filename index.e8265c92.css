@@ -1070,6 +1070,7 @@ img {
 
 .followBlock__link .followBlock__icon {
   fill: #68899a;
+  transition: fill .25s cubic-bezier(.4, 0, .2, 1);
 }
 
 .subscribeBlock {

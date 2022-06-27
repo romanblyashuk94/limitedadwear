@@ -508,6 +508,8 @@ var _executeImagePicker = require("./js/executeImagePicker");
 var _executeImagePickerDefault = parcelHelpers.interopDefault(_executeImagePicker);
 var _executeMobileMenu = require("./js/executeMobileMenu");
 var _executeMobileMenuDefault = parcelHelpers.interopDefault(_executeMobileMenu);
+var _executeParametrsHandler = require("./js/executeParametrsHandler");
+var _executeParametrsHandlerDefault = parcelHelpers.interopDefault(_executeParametrsHandler);
 var _executeRating = require("./js/executeRating");
 var _executeRatingDefault = parcelHelpers.interopDefault(_executeRating);
 var _showAlertMessage = require("./js/showAlertMessage");
@@ -522,28 +524,27 @@ const closeMenuBtnRef = document.querySelector("[data-closeMenuBtn]");
 const menuRef = document.querySelector("[data-menu]");
 const selectedImageRef = document.querySelector("[data-selectedimage]");
 const productImagesThumbnailRef = document.querySelector("[data-productImagesThumbnail]");
+const parametrsForm = document.querySelector(".parametrsForm");
+(0, _executeParametrsHandlerDefault.default)(parametrsForm);
 (0, _executeImagePickerDefault.default)(productImagesThumbnailRef, selectedImageRef);
 (0, _executeMobileMenuDefault.default)(openMenuBtnRef, closeMenuBtnRef, menuRef);
 (0, _executeRatingDefault.default)(ratingStars);
 (0, _showAlertMessageDefault.default)(alertRef, closeAlertBtnRef);
 
-},{"./js/executeRating":"lVDBw","./js/showAlertMessage":"c1hm7","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./js/executeMobileMenu":"hDWcM","./js/executeImagePicker":"vFeWd"}],"lVDBw":[function(require,module,exports) {
+},{"./js/executeImagePicker":"vFeWd","./js/executeMobileMenu":"hDWcM","./js/executeRating":"lVDBw","./js/showAlertMessage":"c1hm7","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./js/executeParametrsHandler":"aTqA2"}],"vFeWd":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-function executeRating(stars) {
-    const starClassActive = "rating__star fas fa-star";
-    const starClassInactive = "rating__star far fa-star";
-    const starsLength = stars.length;
-    let i;
-    stars.map((star)=>{
-        star.onclick = ()=>{
-            i = stars.indexOf(star);
-            if (star.className === starClassInactive) for(i; i >= 0; --i)stars[i].className = starClassActive;
-            else for(i; i < starsLength; ++i)stars[i].className = starClassInactive;
-        };
+function executeImagePicker(productImagesThumbnailRef, selectedImageRef) {
+    productImagesThumbnailRef.addEventListener("click", (e)=>{
+        e.preventDefault();
+        if (e.target.nodeName !== "IMG") return;
+        let currentSelectedImage = e.currentTarget.querySelector("img.selectedImage");
+        currentSelectedImage.classList.remove("selectedImage");
+        e.target.classList.add("selectedImage");
+        selectedImageRef.src = e.target.src;
     });
 }
-exports.default = executeRating;
+exports.default = executeImagePicker;
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
@@ -575,7 +576,34 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}],"c1hm7":[function(require,module,exports) {
+},{}],"hDWcM":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function executeMobileMenu(openMenuBtnRef, closeMenuBtnRef, menuRef) {
+    openMenuBtnRef.addEventListener("click", ()=>menuRef.classList.toggle("isOpen"));
+    closeMenuBtnRef.addEventListener("click", ()=>menuRef.classList.toggle("isOpen"));
+}
+exports.default = executeMobileMenu;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lVDBw":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function executeRating(stars) {
+    const starClassActive = "rating__star fas fa-star";
+    const starClassInactive = "rating__star far fa-star";
+    const starsLength = stars.length;
+    let i;
+    stars.map((star)=>{
+        star.onclick = ()=>{
+            i = stars.indexOf(star);
+            if (star.className === starClassInactive) for(i; i >= 0; --i)stars[i].className = starClassActive;
+            else for(i; i < starsLength; ++i)stars[i].className = starClassInactive;
+        };
+    });
+}
+exports.default = executeRating;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"c1hm7":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 function showAlertMessage(alertRef, closeAlertBtnRef) {
@@ -587,29 +615,16 @@ function showAlertMessage(alertRef, closeAlertBtnRef) {
 }
 exports.default = showAlertMessage;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hDWcM":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aTqA2":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-function executeMobileMenu(openMenuBtnRef, closeMenuBtnRef, menuRef) {
-    openMenuBtnRef.addEventListener("click", ()=>menuRef.classList.toggle("isOpen"));
-    closeMenuBtnRef.addEventListener("click", ()=>menuRef.classList.toggle("isOpen"));
-}
-exports.default = executeMobileMenu;
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"vFeWd":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-function executeImagePicker(productImagesThumbnailRef, selectedImageRef) {
-    productImagesThumbnailRef.addEventListener("click", (e)=>{
-        e.preventDefault();
-        if (e.target.nodeName !== "IMG") return;
-        let currentSelectedImage = e.currentTarget.querySelector("img.selectedImage");
-        currentSelectedImage.classList.remove("selectedImage");
-        e.target.classList.add("selectedImage");
-        selectedImageRef.src = e.target.src;
+function executeParametrsHandler(parametrsForm) {
+    parametrsForm.addEventListener("change", ()=>{
+        document.querySelector("[data-sizeOutput]").textContent = parametrsForm.elements["size"].value;
+        document.querySelector("[data-colorOutput]").textContent = parametrsForm.elements["color"].value;
     });
 }
-exports.default = executeImagePicker;
+exports.default = executeParametrsHandler;
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["1RB6v","8lqZg"], "8lqZg", "parcelRequire58f6")
 
