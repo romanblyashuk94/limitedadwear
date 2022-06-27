@@ -1002,10 +1002,18 @@ img {
   transform: rotate(180deg);
 }
 
+.thumbnails__item--selected {
+  outline: 5px solid #b68f5b;
+}
+
 .thumbnails__image {
   width: 100%;
   height: 205px;
   background-color: #e1e1e1;
+}
+
+.thumbnails__image .selectedImage {
+  border: 3px solid #b68f5b;
 }
 
 .productGallery__photos {
