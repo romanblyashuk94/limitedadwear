@@ -504,6 +504,8 @@ function hmrAcceptRun(bundle, id) {
 
 },{}],"8lqZg":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+var _executeMobileMenu = require("./js/executeMobileMenu");
+var _executeMobileMenuDefault = parcelHelpers.interopDefault(_executeMobileMenu);
 var _executeRating = require("./js/executeRating");
 var _executeRatingDefault = parcelHelpers.interopDefault(_executeRating);
 var _showAlertMessage = require("./js/showAlertMessage");
@@ -513,10 +515,14 @@ const closeAlertBtnRef = document.querySelector("[data-close-alert]");
 const ratingStars = [
     ...document.getElementsByClassName("rating__star")
 ];
+const openMenuBtnRef = document.querySelector("[data-openMenuBtn]");
+const closeMenuBtnRef = document.querySelector("[data-closeMenuBtn]");
+const menuRef = document.querySelector("[data-menu]");
+(0, _executeMobileMenuDefault.default)(openMenuBtnRef, closeMenuBtnRef, menuRef);
 (0, _executeRatingDefault.default)(ratingStars);
 (0, _showAlertMessageDefault.default)(alertRef, closeAlertBtnRef);
 
-},{"./js/executeRating":"lVDBw","./js/showAlertMessage":"c1hm7","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lVDBw":[function(require,module,exports) {
+},{"./js/executeRating":"lVDBw","./js/showAlertMessage":"c1hm7","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./js/executeMobileMenu":"hDWcM"}],"lVDBw":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 function executeRating(stars) {
@@ -575,6 +581,15 @@ function showAlertMessage(alertRef, closeAlertBtnRef) {
     }
 }
 exports.default = showAlertMessage;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hDWcM":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function executeMobileMenu(openMenuBtnRef, closeMenuBtnRef, menuRef) {
+    openMenuBtnRef.addEventListener("click", ()=>menuRef.classList.toggle("isOpen"));
+    closeMenuBtnRef.addEventListener("click", ()=>menuRef.classList.toggle("isOpen"));
+}
+exports.default = executeMobileMenu;
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["1RB6v","8lqZg"], "8lqZg", "parcelRequire58f6")
 
