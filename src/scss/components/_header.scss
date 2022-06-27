@@ -185,6 +185,10 @@
 
 .catalogNav {
     
+    .closeMenuBtn {
+        display: none;
+    }
+    
     @media screen and (max-width: 605px) {
         position: fixed;
         top: 0;
