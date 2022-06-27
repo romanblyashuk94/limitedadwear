@@ -26,6 +26,13 @@
     </div>
     <header class="header">
         <div class="header__top container">
+            <div class="mobileMenuBtnWrapper">
+                <button class="mobileMenuBtn" data-openMenuBtn>
+                    <svg class="mobileMenuBtn__icon" width="25" height="25">
+                        <use href="./img/icons/symbol-defs.svg#icon-burger"></use>
+                    </svg>
+                </button>
+            </div>
             <nav class="siteNav">
                 <ul class="siteNav__list">
                     <li class="siteNav__item">
@@ -70,7 +77,12 @@
         </div>
         <div class="header__bottom">
             <div class="container">
-                <nav class="catalogNav">
+                <nav class="catalogNav" data-menu>
+                    <button class="closeMenuBtn" data-closeMenuBtn>
+                        <svg class="closeMenuBtn__icon" width="25" height="25">
+                            <use href="./img/icons/symbol-defs.svg#icon-sliderVector"></use>
+                        </svg>
+                    </button>
                     <ul class="catalogNav__List">
                         <li class="cataogNav__item">
                             <a href="" class="catalogNav__link">new arrivals</a>

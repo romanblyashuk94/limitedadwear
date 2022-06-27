@@ -2,12 +2,14 @@
   "name": "limitedadwear",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "source": "src/index.html",
+  "homepage": "https://romanblyashuk94.github.io/limitedadwear",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build"
+    "build": "parcel build --public-url /limitedadwear/",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
   },
   "keywords": [],
   "author": "",
@@ -15,5 +17,9 @@
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
     "parcel": "latest"
+  },
+  "dependencies": {
+    "@swc/helpers": "^0.4.2",
+    "gh-pages": "^4.0.0"
   }
 }

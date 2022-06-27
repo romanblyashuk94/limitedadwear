@@ -2,10 +2,63 @@
     padding-top: 38px;
 }
 
+.header__top {
+    @media screen and (max-width: 605px) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    @media screen and (max-width: 483px) {
+        justify-content: center;
+    }
+    
+}
+
+.mobileMenuBtnWrapper {
+    display: none;
+
+    @media screen and (max-width: 605px) {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @media screen and (max-width: 483px) {
+        margin-right: auto;
+    }
+
+}
+.mobileMenuBtn {
+    
+    background-color: inherit;
+
+
+    @media screen and (max-width: 605px) {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobileMenuBtn__icon {
+        fill: $textLinkColor;
+    }
+
+}
+
 .siteNav__list {
     display: flex;
     justify-content: end;
     gap: 20px;
+
+    @media screen and (max-width: 448px) {
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
 }
 
 .siteNav__link {
@@ -31,6 +84,11 @@
     align-items: center;
     justify-content: space-between;
     margin-top: 19px;
+
+    @media screen and (max-width: 605px) {
+        flex-direction: column;
+        gap: 25px;
+    }
 }
 
 // _________________
@@ -39,11 +97,20 @@
     display: flex;
     align-items: center;
     gap: 28px;
+
+    @media screen and (max-width: 605px) {
+        width: 100%;
+        justify-content: space-around
+    }
 }
 
 // _________________________________________-
 .searchForm {
     position: relative;
+
+    @media screen and (max-width: 605px) {
+        flex: 1 0 auto;
+    }
 }
 
 .searchForm__input {
@@ -55,6 +122,12 @@
     &:focus {
         border: 1px solid $selectedLinkColor;
     }
+
+    @media screen and (max-width: 605px) {
+        width: 100%
+    }
+
+
 }
 
 .searchForm__icon {
@@ -65,7 +138,7 @@
     fill: $textLinkColor;
 }
 
-.searchForm__input:focus + .searchForm__icon {
+.searchForm__input:focus+.searchForm__icon {
     fill: $selectedLinkColor;
 }
 
@@ -93,12 +166,67 @@
 
 // ________________
 
+.header {
+    position: relative;
+}
 
 .header__bottom {
     margin-top: 33px;
     padding: 30px 0;
     border-top: 1px solid #e1e1e1;
     border-bottom: 1px solid #e1e1e1;
+
+    @media screen and (max-width: 605px) {
+        margin-top: 0;
+        padding: 0;
+        border: none;
+    }
+}
+
+.catalogNav {
+    
+    @media screen and (max-width: 605px) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: inherit;
+        overflow: hidden;
+        z-index: 2;
+        transform: translateX(-100%);
+        transition: transform $transitionSetting;
+
+        &.isOpen {
+            transform: translateX(0);
+        }
+
+        .catalogNav__List {
+            flex-direction: column;
+            height: 100vh;
+            width: 50%;
+            padding: 85px 0 20px 0;
+            background-color: white;
+            justify-content: start;
+            border-right: 1px solid gray;
+        }
+
+        .closeMenuBtn {
+            background-color: inherit;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 38px;
+            left: 15px;
+
+            .closeMenuBtn__icon {
+                fill: $textLinkColor;
+                transform: rotate(-90deg);
+            }
+        }
+        
+    }
 }
 
 .catalogNav__List {
@@ -107,6 +235,12 @@
     justify-content: center;
     gap: 80px;
     text-transform: uppercase;
+
+    @media screen and (max-width: 765px) {
+        gap: 50px;
+    }
+
+
 }
 
 .catalogNav__link {
@@ -132,6 +266,6 @@
     }
 }
 
-.catalogNav__link__icon{
+.catalogNav__link__icon {
     transition: transform $transitionSetting;
 }

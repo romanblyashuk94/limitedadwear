@@ -6,6 +6,12 @@
 .productGrid {
     display: flex;
     justify-content: space-between;
+    gap: 31px;
+
+    
+    @media screen and (max-width: 1020px) {
+        flex-direction: column;
+    }
 }
 
 .productGrid_item {
@@ -13,12 +19,20 @@
 }
 
 .productGrid_item--left {
-    flex-basis: 653px;
+    flex-basis: 56.98%;
+    min-width: 498px;
+
+    @media screen and (max-width: 530px) {
+        min-width: auto;
+    }
 }
 
 .productGrid_item--right {
+    flex-basis: 40.27%;
 
-    flex-basis: 462px;
+    @media screen and (max-width: 553px) {
+        padding-top: 100px;
+    }
 }
 
 .product__name {
@@ -280,6 +294,18 @@
     margin-top: 30px;
     display: flex;
     gap: 10px;
+
+    @media screen and (max-width: 1020px) {
+        justify-content: center;
+    }
+
+    @media screen and (max-width: 485px) {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 90px;
+    }
+
 }
 
 .addToBtn {
@@ -300,6 +326,8 @@
         color: $selectedLinkColor;
         border: 1px solid $selectedLinkColor;
     }
+
+    
 }
 
 .addToBtn__icon {
@@ -327,6 +355,12 @@
 
     &:hover {
         color: $primaryTextColor;
+    }
+
+    @media screen and (max-width: 485px) {
+        bottom: 145px;
+        right: 50%;
+        transform: translateX(50%);
     }
 }
 
@@ -402,6 +436,10 @@
     &__prev span {
         float: right;
     }
+
+    @media screen and (max-width: 1020px) {
+        top: 925px;
+    }
 }
 
 .productHandler__link {
@@ -434,10 +472,12 @@
 .productGallery {
     display: flex;
     justify-content: space-between;
+    gap: 28px;
     max-height: 877px;
 }
 
 .productGallery__thumbnails {
+    flex-basis: 25.11%;
     position: relative;
 }
 
@@ -483,14 +523,14 @@
 .thumbnails__link {}
 
 .thumbnails__image {
-    width: 164px;
+    width: 100%;
     height: 205px;
     background-color: #e1e1e1;
 
 }
 
 .productGallery__photos {
-    width: 461px;
+    flex-basis: 70.59%;
     height: 877px;
     background-color: #e1e1e1;
 }
