@@ -109,7 +109,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
+  flex-direction: column;
   font-family: Proxima Nova Rg;
+  display: flex;
+}
+
+body main {
+  flex: 1 0 auto;
 }
 
 img {
@@ -878,6 +884,10 @@ img {
   display: flex;
 }
 
+.facebookShareBtn__icon {
+  fill: #fff;
+}
+
 .printPageLink {
   float: right;
   color: #a4a4a4;
@@ -958,7 +968,7 @@ img {
 .thumbnails {
   max-height: 877px;
   flex-direction: column;
-  gap: 18px;
+  gap: 19px;
   display: flex;
   overflow: hidden;
 }
@@ -1002,6 +1012,166 @@ img {
   height: 877px;
   background-color: #e1e1e1;
   flex-basis: 70.59%;
+}
+
+.footer {
+  border-top: 1px solid #e1e1e1;
+  margin-top: 30px;
+}
+
+.footer__contentWrapper {
+  justify-content: space-between;
+  gap: 20px;
+  padding: 16px 0 23px;
+  display: flex;
+}
+
+@media screen and (max-width: 772px) {
+  .footer__contentWrapper {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 488px) {
+  .footer__contentWrapper {
+    align-items: center;
+  }
+}
+
+.followBlock__title {
+  color: #68899a;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+.followBlock__list {
+  gap: 15px;
+  margin-top: 8px;
+  display: flex;
+}
+
+.followBlock__link {
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+}
+
+.followBlock__link:hover .followBlock__icon {
+  fill: #b68f5b;
+}
+
+.followBlock__link .followBlock__icon {
+  fill: #68899a;
+}
+
+.subscribeBlock {
+  margin-top: 30px;
+}
+
+.subscribeBlock__title {
+  color: #68899a;
+  text-transform: uppercase;
+  max-width: 180px;
+  font-size: 12px;
+}
+
+.subscribeBlock__form {
+  width: 262px;
+  margin-top: 8px;
+  position: relative;
+}
+
+.subscribeBlock__input {
+  width: 262px;
+  border: 1px solid #68899a;
+  padding: 11px 30px 12px 15px;
+}
+
+.subscribeBlock__input:focus {
+  border: 1px solid #b68f5b;
+}
+
+.subscribeBlock__submitBtn {
+  background-color: inherit;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+.subscribeBlock__submitBtn:hover .subscribeBlock__submitBtn_icon {
+  fill: #b68f5b;
+}
+
+.subscribeBlock__submitBtn_icon {
+  fill: #ede3d6;
+  transition: fill .25s cubic-bezier(.4, 0, .2, 1);
+}
+
+.footer__contentRight {
+  min-width: 560px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  display: flex;
+}
+
+@media screen and (max-width: 872px) {
+  .footer__contentRight {
+    min-width: auto;
+    gap: 50px;
+  }
+}
+
+@media screen and (max-width: 772px) {
+  .footer__contentRight {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 488px) {
+  .footer__contentRight {
+    justify-content: center;
+  }
+}
+
+.footer__column {
+  font-size: 12px;
+}
+
+.footer__column .footer__column__title {
+  text-transform: uppercase;
+  color: #bd9d74;
+}
+
+.footer__column .footer__column__list {
+  margin-top: 26px;
+}
+
+.footer__column .footer__column__list .footer__column__item:not(:last-child) {
+  margin-bottom: 18px;
+}
+
+.footer__column .footer__column__list .footer__column__link {
+  color: #68899a;
+  transition: color .25s cubic-bezier(.4, 0, .2, 1);
+}
+
+.footer__column .footer__column__list .footer__column__link:hover {
+  color: #b68f5b;
+}
+
+.footer__logo {
+  margin-top: -16px;
+}
+
+.copyright {
+  min-height: 30px;
+  text-align: center;
+  color: #fff;
+  letter-spacing: .48px;
+  background-color: #ede3d6;
+  font-size: 12px;
+  line-height: 30px;
 }
 
 /*# sourceMappingURL=index.e8265c92.css.map */
