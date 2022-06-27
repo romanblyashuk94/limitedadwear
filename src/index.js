@@ -1,6 +1,7 @@
 import executeImagePicker from "./js/executeImagePicker";
 import executeMobileMenu from "./js/executeMobileMenu";
 import executeParametrsHandler from "./js/executeParametrsHandler";
+import executeQuantityCounter from "./js/executeQuantityCounter";
 import executeRating from "./js/executeRating";
 import showAlertMessage from "./js/showAlertMessage";
 
@@ -18,8 +19,19 @@ const productImagesThumbnailRef = document.querySelector(
 
 const parametrsForm = document.querySelector(".parametrsForm");
 
+const productQuantityInput = document.querySelector("[data-quantityInput]");
+const productQuantityTotalOutput = document.querySelector(".totalPrice");
+const productQuantityIncrementBtn = document.querySelector("[data-increment]");
+const productQuantityDecrementBtn = document.querySelector("[data-decrement]");
+
 executeParametrsHandler(parametrsForm);
 executeImagePicker(productImagesThumbnailRef, selectedImageRef);
 executeMobileMenu(openMenuBtnRef, closeMenuBtnRef, menuRef);
 executeRating(ratingStars);
 showAlertMessage(alertRef, closeAlertBtnRef);
+executeQuantityCounter(
+  productQuantityInput,
+  productQuantityTotalOutput,
+  productQuantityIncrementBtn,
+  productQuantityDecrementBtn
+);

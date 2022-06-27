@@ -194,7 +194,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="productGallery__photos" >
+                        <div class="productGallery__photos">
                             <img src="./img/products/3.jpg" data-selectedImage>
                         </div>
                     </div>
@@ -306,10 +306,10 @@
                                     </div>
                                     <div class="parametrInput">
                                         <div class="quantity">
-                                            <input type="text" class="quantity__input" value="1">
+                                            <input type="number" readonly="readonly" min="1" max="5" class="quantity__input" data-quantityInput value="1">
                                             <ul class="quantity__buttonsList">
                                                 <li class="quantity__buttonItem">
-                                                    <button type="button" class="quantity__button">
+                                                    <button type="button" class="quantity__button" data-increment>
                                                         <svg class="quantity__button__icon quantity__button__icon--increment"
                                                             width="8" height="5">
                                                             <use href="./img/icons/symbol-defs.svg#icon-vectorDown">
@@ -318,7 +318,7 @@
                                                     </button>
                                                 </li>
                                                 <li class="quantity__buttonItem">
-                                                    <button type="button" class="quantity__button">
+                                                    <button type="button" class="quantity__button" data-decrement>
                                                         <svg class="quantity__button__icon" width="8" height="5">
                                                             <use href="./img/icons/symbol-defs.svg#icon-vectorDown">
                                                             </use>
