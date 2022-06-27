@@ -45,6 +45,7 @@
 
     .followBlock__icon {
         fill: $textLinkColor;
+        transition: fill $transitionSetting;
     }
 
 }

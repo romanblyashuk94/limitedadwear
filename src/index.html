@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ChiefSlider CSS -->
+    <link rel="stylesheet" href="/assets/css/chief-slider.min.css">
+    <!-- ChiefSlider JavaScript -->
+    <script defer src="/assets/js/chief-slider.js"></script>
     <link rel="stylesheet" href="./scss/style.scss" />
     <title>LIMITEDADWEAR</title>
 </head>
@@ -194,7 +198,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="productGallery__photos" >
+                        <div class="productGallery__photos">
                             <img src="./img/products/3.jpg" data-selectedImage>
                         </div>
                     </div>
@@ -238,7 +242,7 @@
                                 <li class="parametrsForm__field">
                                     <div class="parametrOutput">
                                         <span class="parametrOutput__prop">Color:</span>
-                                        <span class="parametrOutput__value">Sand</span>
+                                        <span class="parametrOutput__value" data-colorOutput>Sand</span>
                                     </div>
                                     <div class="parametrInput">
                                         <label class="parametrInput__field">
@@ -250,7 +254,7 @@
                                             </div>
                                         </label>
                                         <label class="parametrInput__field">
-                                            <input class="paramertInput__input" type="radio" name="color" value="dark">
+                                            <input class="paramertInput__input" type="radio" name="color" value="Dark">
                                             <div class="paramertInput__btn">
                                                 <div class="paramertInput__btnLabel" style="background-color:#524e49;">
                                                 </div>
@@ -261,7 +265,7 @@
                                 <li class="parametrsForm__field">
                                     <div class="parametrOutput">
                                         <span class="parametrOutput__prop">Size:</span>
-                                        <span class="parametrOutput__value">Large</span>
+                                        <span class="parametrOutput__value" data-sizeOutput>Large</span>
                                     </div>
                                     <div class="parametrInput">
                                         <label class="parametrInput__field">
@@ -285,7 +289,7 @@
                                         </label>
                                         <label class="parametrInput__field">
                                             <input class="paramertInput__input" type="radio" name="size"
-                                                value="Extra Large" checked>
+                                                value="Extra Large">
                                             <div class="paramertInput__btn">
                                                 <div class="paramertInput__btnLabel">XL</div>
                                             </div>

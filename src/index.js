@@ -1,5 +1,6 @@
 import executeImagePicker from "./js/executeImagePicker";
 import executeMobileMenu from "./js/executeMobileMenu";
+import executeParametrsHandler from "./js/executeParametrsHandler";
 import executeRating from "./js/executeRating";
 import showAlertMessage from "./js/showAlertMessage";
 
@@ -15,6 +16,9 @@ const productImagesThumbnailRef = document.querySelector(
   "[data-productImagesThumbnail]"
 );
 
+const parametrsForm = document.querySelector(".parametrsForm");
+
+executeParametrsHandler(parametrsForm);
 executeImagePicker(productImagesThumbnailRef, selectedImageRef);
 executeMobileMenu(openMenuBtnRef, closeMenuBtnRef, menuRef);
 executeRating(ratingStars);
