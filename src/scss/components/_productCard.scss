@@ -522,7 +522,11 @@
     }
 }
 
-.thumbnails__item {}
+.thumbnails__item {
+    &--selected {
+        outline: 5px solid $selectedLinkColor;
+    }
+}
 
 .thumbnails__link {}
 
@@ -531,6 +535,9 @@
     height: 205px;
     background-color: #e1e1e1;
 
+    .selectedImage {
+        border: 3px solid $selectedLinkColor;
+    }
 }
 
 .productGallery__photos {
