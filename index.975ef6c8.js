@@ -510,6 +510,8 @@ var _executeMobileMenu = require("./js/executeMobileMenu");
 var _executeMobileMenuDefault = parcelHelpers.interopDefault(_executeMobileMenu);
 var _executeParametrsHandler = require("./js/executeParametrsHandler");
 var _executeParametrsHandlerDefault = parcelHelpers.interopDefault(_executeParametrsHandler);
+var _executeQuantityCounter = require("./js/executeQuantityCounter");
+var _executeQuantityCounterDefault = parcelHelpers.interopDefault(_executeQuantityCounter);
 var _executeRating = require("./js/executeRating");
 var _executeRatingDefault = parcelHelpers.interopDefault(_executeRating);
 var _showAlertMessage = require("./js/showAlertMessage");
@@ -525,13 +527,18 @@ const menuRef = document.querySelector("[data-menu]");
 const selectedImageRef = document.querySelector("[data-selectedimage]");
 const productImagesThumbnailRef = document.querySelector("[data-productImagesThumbnail]");
 const parametrsForm = document.querySelector(".parametrsForm");
+const productQuantityInput = document.querySelector("[data-quantityInput]");
+const productQuantityTotalOutput = document.querySelector(".totalPrice");
+const productQuantityIncrementBtn = document.querySelector("[data-increment]");
+const productQuantityDecrementBtn = document.querySelector("[data-decrement]");
 (0, _executeParametrsHandlerDefault.default)(parametrsForm);
 (0, _executeImagePickerDefault.default)(productImagesThumbnailRef, selectedImageRef);
 (0, _executeMobileMenuDefault.default)(openMenuBtnRef, closeMenuBtnRef, menuRef);
 (0, _executeRatingDefault.default)(ratingStars);
 (0, _showAlertMessageDefault.default)(alertRef, closeAlertBtnRef);
+(0, _executeQuantityCounterDefault.default)(productQuantityInput, productQuantityTotalOutput, productQuantityIncrementBtn, productQuantityDecrementBtn);
 
-},{"./js/executeImagePicker":"vFeWd","./js/executeMobileMenu":"hDWcM","./js/executeRating":"lVDBw","./js/showAlertMessage":"c1hm7","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./js/executeParametrsHandler":"aTqA2"}],"vFeWd":[function(require,module,exports) {
+},{"./js/executeImagePicker":"vFeWd","./js/executeMobileMenu":"hDWcM","./js/executeRating":"lVDBw","./js/showAlertMessage":"c1hm7","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./js/executeParametrsHandler":"aTqA2","./js/executeQuantityCounter":"eObAy"}],"vFeWd":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 function executeImagePicker(productImagesThumbnailRef, selectedImageRef) {
@@ -625,6 +632,27 @@ function executeParametrsHandler(parametrsForm) {
     });
 }
 exports.default = executeParametrsHandler;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eObAy":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function executeQuantityCounter(productQuantityInput, productQuantityTotalOutput, productQuantityIncrementBtn, productQuantityDecrementBtn) {
+    productQuantityIncrementBtn.addEventListener("click", ()=>{
+        const currentNumber = Number(productQuantityInput.value);
+        if (currentNumber < 20) {
+            productQuantityInput.value = currentNumber + 1;
+            productQuantityTotalOutput.textContent = `$${(285 * productQuantityInput.value).toFixed(2)}`;
+        }
+    });
+    productQuantityDecrementBtn.addEventListener("click", ()=>{
+        const currentNumber = Number(productQuantityInput.value);
+        if (currentNumber > 1) {
+            productQuantityInput.value = currentNumber - 1;
+            productQuantityTotalOutput.textContent = `$${(285 * productQuantityInput.value).toFixed(2)}`;
+        }
+    });
+}
+exports.default = executeQuantityCounter;
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["1RB6v","8lqZg"], "8lqZg", "parcelRequire58f6")
 
