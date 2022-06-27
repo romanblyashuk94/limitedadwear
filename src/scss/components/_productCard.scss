@@ -401,6 +401,10 @@
     background-image: linear-gradient(to top, #3a53a3 0%, #4b67bc 100%);
 }
 
+.facebookShareBtn__icon {
+    fill: #ffffff;
+}
+
 .printPageLink {
     display: inline-flex;
     align-items: center;
@@ -484,7 +488,7 @@
 .thumbnails {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 19px;
     max-height: 877px;
     overflow: hidden;
 }
