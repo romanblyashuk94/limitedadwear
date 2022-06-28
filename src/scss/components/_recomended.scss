@@ -36,6 +36,10 @@
     &--next {
         right: 0; 
     }
+
+    &:hover .slider__btn__icon {
+        fill: black;
+    }
 }
 
 .slider__btn__icon {
@@ -61,6 +65,10 @@
 
     &:hover {
         transform: scale(103%);
+    }
+
+    &:hover .recomended__name {
+        color: $selectedLinkColor;
     }
 }
 
@@ -114,4 +122,8 @@
         padding: 10px 15px;
 
     }
+}
+
+.offerBanner {
+    margin-top: 65px;
 }
