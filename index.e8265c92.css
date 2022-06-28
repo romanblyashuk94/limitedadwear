@@ -1027,6 +1027,88 @@ img {
   flex-basis: 70.59%;
 }
 
+.productAbout {
+  margin-top: 136px;
+}
+
+.productAbout__form {
+  border-bottom: 1px solid #b68f5b;
+  gap: 4px;
+  display: flex;
+  overflow: hidden;
+}
+
+.productAbout__form__label {
+  display: inline-flex;
+}
+
+.productAbout__form__input {
+  appearance: none;
+}
+
+.productAbout__form__input:checked + .productAbout__form__btn {
+  color: #000;
+  border: 1px solid #b68f5b;
+}
+
+.productAbout__form__btn {
+  width: 226px;
+  height: 55px;
+  background-color: inherit;
+  text-transform: uppercase;
+  color: #a4a4a4;
+  cursor: pointer;
+  border: 1px solid #a4a4a4;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -1px;
+  font-size: 14px;
+  display: inline-flex;
+}
+
+.productAbout__form__btn:hover {
+  color: #000;
+}
+
+@media screen and (max-width: 716px) {
+  .productAbout__form__btn {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 634px) {
+  .productAbout__form__btn {
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 476px) {
+  .productAbout__form__btn {
+    width: 113px;
+    font-size: 12px;
+  }
+}
+
+.productAbout__content {
+  max-width: 783px;
+  color: #555;
+  padding: 30px 13px;
+  font-size: 14px;
+}
+
+.contentList {
+  margin-top: 30px;
+  padding-left: 13px;
+}
+
+.contentList .contentList__item {
+  list-style: disc;
+}
+
+.contentList .contentList__item::marker {
+  color: #b68f5b;
+}
+
 .footer {
   border-top: 1px solid #e1e1e1;
   margin-top: 30px;

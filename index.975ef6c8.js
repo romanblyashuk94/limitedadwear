@@ -538,7 +538,7 @@ const productQuantityDecrementBtn = document.querySelector("[data-decrement]");
 (0, _showAlertMessageDefault.default)(alertRef, closeAlertBtnRef);
 (0, _executeQuantityCounterDefault.default)(productQuantityInput, productQuantityTotalOutput, productQuantityIncrementBtn, productQuantityDecrementBtn);
 
-},{"./js/executeImagePicker":"vFeWd","./js/executeMobileMenu":"hDWcM","./js/executeRating":"lVDBw","./js/showAlertMessage":"c1hm7","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./js/executeParametrsHandler":"aTqA2","./js/executeQuantityCounter":"eObAy"}],"vFeWd":[function(require,module,exports) {
+},{"./js/executeImagePicker":"vFeWd","./js/executeMobileMenu":"hDWcM","./js/executeParametrsHandler":"aTqA2","./js/executeQuantityCounter":"eObAy","./js/executeRating":"lVDBw","./js/showAlertMessage":"c1hm7","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"vFeWd":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 function executeImagePicker(productImagesThumbnailRef, selectedImageRef) {
@@ -592,36 +592,6 @@ function executeMobileMenu(openMenuBtnRef, closeMenuBtnRef, menuRef) {
 }
 exports.default = executeMobileMenu;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lVDBw":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-function executeRating(stars) {
-    const starClassActive = "rating__star fas fa-star";
-    const starClassInactive = "rating__star far fa-star";
-    const starsLength = stars.length;
-    let i;
-    stars.map((star)=>{
-        star.onclick = ()=>{
-            i = stars.indexOf(star);
-            if (star.className === starClassInactive) for(i; i >= 0; --i)stars[i].className = starClassActive;
-            else for(i; i < starsLength; ++i)stars[i].className = starClassInactive;
-        };
-    });
-}
-exports.default = executeRating;
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"c1hm7":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-function showAlertMessage(alertRef, closeAlertBtnRef) {
-    closeAlertBtnRef.addEventListener("click", onCloseAlert);
-    function onCloseAlert() {
-        alertRef.classList.remove("isOpen");
-        closeAlertBtnRef.removeEventListener("click", onCloseAlert);
-    }
-}
-exports.default = showAlertMessage;
-
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aTqA2":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
@@ -653,6 +623,36 @@ function executeQuantityCounter(productQuantityInput, productQuantityTotalOutput
     });
 }
 exports.default = executeQuantityCounter;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lVDBw":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function executeRating(stars) {
+    const starClassActive = "rating__star fas fa-star";
+    const starClassInactive = "rating__star far fa-star";
+    const starsLength = stars.length;
+    let i;
+    stars.map((star)=>{
+        star.onclick = ()=>{
+            i = stars.indexOf(star);
+            if (star.className === starClassInactive) for(i; i >= 0; --i)stars[i].className = starClassActive;
+            else for(i; i < starsLength; ++i)stars[i].className = starClassInactive;
+        };
+    });
+}
+exports.default = executeRating;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"c1hm7":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function showAlertMessage(alertRef, closeAlertBtnRef) {
+    closeAlertBtnRef.addEventListener("click", onCloseAlert);
+    function onCloseAlert() {
+        alertRef.classList.remove("isOpen");
+        closeAlertBtnRef.removeEventListener("click", onCloseAlert);
+    }
+}
+exports.default = showAlertMessage;
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["1RB6v","8lqZg"], "8lqZg", "parcelRequire58f6")
 
