@@ -1149,6 +1149,10 @@ img {
   right: 0;
 }
 
+.slider__btn:hover .slider__btn__icon {
+  fill: #000;
+}
+
 .slider__btn__icon {
   fill: #c8c8c8;
 }
@@ -1175,6 +1179,10 @@ img {
 
 .recomended__link:hover {
   transform: scale(103%);
+}
+
+.recomended__link:hover .recomended__name {
+  color: #b68f5b;
 }
 
 .recommended__item {
@@ -1226,6 +1234,10 @@ img {
   background-color: #f8f4ef;
   padding: 10px 15px;
   font-size: 12px;
+}
+
+.offerBanner {
+  margin-top: 65px;
 }
 
 .footer {
