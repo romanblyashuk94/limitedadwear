@@ -545,3 +545,80 @@
     height: 877px;
     background-color: #e1e1e1;
 }
+
+// ________________________________________
+.productAbout {
+    margin-top: 136px;
+}
+
+.productAbout__form {
+    border-bottom: 1px solid $selectedLinkColor;
+    overflow: hidden;
+    display: flex;
+    gap:4px;
+}
+
+.productAbout__form__label {
+    display: inline-flex;
+    
+}
+.productAbout__form__input {
+    appearance: none;
+
+    &:checked+.productAbout__form__btn {
+        color: #000000;
+        border: 1px solid $selectedLinkColor;
+    }
+}
+.productAbout__form__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 226px;
+    height: 55px;
+    background-color: inherit;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #a4a4a4;
+    margin-bottom: -1px;
+    border: 1px solid #a4a4a4;
+    cursor: pointer;
+    
+    &:hover {
+        color: #000000;
+    }
+
+    @media screen and (max-width: 716px) {
+        width: 200px
+    }
+
+    @media screen and (max-width: 634px) {
+        width: 150px
+    }
+
+    @media screen and (max-width: 476px) {
+        font-size: 12px;
+        width: 113px
+    }
+}
+
+.productAbout__content {
+    padding: 30px 13px;
+    max-width: 783px;
+    font-size: 14px;
+    color: #555555;
+}
+
+.contentList {
+    margin-top: 30px;
+    padding-left: 13px;
+    
+
+    .contentList__item {
+        list-style: disc;
+
+        &::marker {
+            color: $selectedLinkColor;
+        }
+    }
+}
