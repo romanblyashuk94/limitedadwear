@@ -1,0 +1,117 @@
+.recommended {
+    border-top: 1px solid #e1e1e1;
+    margin-top: 73px;
+}
+
+.recommended__title {
+    margin-top: 13px;
+    color: $selectedLinkColor;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 1.4px;
+}
+
+.recommended__slider {
+    padding: 33px 2px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 38px;
+    border: 1px solid #a4a4a4;
+    background-color: #ffffff;
+    position: absolute;
+    top: 175px;
+    z-index: 2;
+
+    &--prev {
+        left: 0;
+    }
+
+    &--next {
+        right: 0; 
+    }
+}
+
+.slider__btn__icon {
+    fill: #c8c8c8;
+
+    &--prev {
+        transform: rotate(270deg);
+    }
+    &--next {
+        transform: rotate(90deg);
+    }
+}
+.recommended__list {
+    display: flex;
+    gap: 27px;
+}
+
+.recomended__link {
+    display: inline-block;
+    color: inherit;
+    width: 100%;
+    transition: transform $transitionSetting;
+
+    &:hover {
+        transform: scale(103%);
+    }
+}
+
+.recommended__item {
+    min-width: 266px;
+    text-align: center;
+}
+
+.recommended__image {
+    width: 100%;
+    height: 340px;
+}
+
+.recomended__name {
+    margin-top: 19px;
+    color: $textLinkColor;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+.recomended__price {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #000000;
+
+    &__currentPrice {
+        color: $promoTextColor;
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+
+    &__prevPrice {
+        color: #a4a4a4;
+        font-size: 13px;
+        text-decoration: line-through;
+    }
+}
+
+.recomended__offer {
+    padding: 5px;
+
+    .recomended__offer__message {
+        font-size: 12px;
+        color: $promoTextColor;
+        background-color: #f8f4ef;
+        padding: 10px 15px;
+
+    }
+}
